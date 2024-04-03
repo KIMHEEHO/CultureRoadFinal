@@ -1,11 +1,16 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Build') {
-            steps {
-                sh "echo 'build 오늘 진짜 마지막'"
-            }
+    stage('Ready') {
+        sh "echo 'Ready'"
         }
-    }
+        
+    stage('Build') {
+        sh "echo 'Build'"
+        }
+        
+    stage('Deploy') {
+        sh "echo 'Deploy'"
+        }
+
 }
