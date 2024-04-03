@@ -3,14 +3,9 @@ pipeline {
 
     stages {
 
-        stage('git clone') {
+        stage('github-clone') {
             steps{
-                git 'https://github.com/KIMHEEHO/CultureRoadFinal.git'
-            }
-        }
-        stage('checkout') {
-            steps {
-                checkout(branch: 'main')
+                git branch:'', credentialsId: 'heeho', url : '{REPOSITORY URL}'
             }
         }
 
