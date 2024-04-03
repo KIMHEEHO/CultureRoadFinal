@@ -5,7 +5,12 @@ pipeline {
 
         stage('git clone') {
             steps{
-                branch: 'main' git 'https://github.com/KIMHEEHO/CultureRoadFinal.git'
+                git 'https://github.com/KIMHEEHO/CultureRoadFinal.git'
+            }
+        }
+        stage('checkout') {
+            steps {
+                checkout(branch: 'main')
             }
         }
 
