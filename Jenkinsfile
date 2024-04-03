@@ -3,9 +3,9 @@ pipeline {
 
     stages {
 
-        stage('github-clone') {
-            steps {
-                git branch: '', credentialsId:'github_token', url : '{REPOSITORY URL}'
+        stage('git clone') {
+            steps{
+                git 'https://github.com/KIMHEEHO/CultureRoadFinal.git'
             }
         }
 
