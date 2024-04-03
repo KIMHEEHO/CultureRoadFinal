@@ -7,6 +7,11 @@ pipeline {
                 sh 'echo "Ready stage"'
             }
         }
+        stage('github-clone') {
+            steps {
+                git branch: '', credentialsId:'github_token', url :'{REPOSITORY URL}'
+            }
+        }
         stage('Build') {
             steps {
                 sh 'echo "Build stage"'
